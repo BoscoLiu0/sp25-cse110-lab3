@@ -5,6 +5,7 @@ Welcome to my Lab 3 repository for CSE 110.
 ## GitHub Pages
 
 You can view the hosted site here:  
+https://boscoliu0.github.io/sp25-cse110-lab3/
 
 
 ## Repository Contents
