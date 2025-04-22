@@ -3,11 +3,7 @@
 **Date and Time:** 2025-04-22, 10:00 AM
 
 **Participants:**
-
-- Andrew
 - Liu
-- Ferrari
-- Abdirahman
 
 **Meeting Type:** Daily Standup
 
