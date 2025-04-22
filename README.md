@@ -7,8 +7,6 @@ Welcome to my Lab 3 repository for CSE 110.
 You can view the hosted site here:  
 
 
-*(Make sure this link works before submitting.)*
-
 ## Repository Contents
 
 - **README.md** – this file  
@@ -16,9 +14,3 @@ You can view the hosted site here:
 - **index.html** – Meeting minutes HTML from Lab 2 (updated for Lab 3)  
 - **style.css** – External CSS stylesheet for Lab 3  
 - **css-validation.png** – Screenshot of successful CSS validation  
-
-## Submission
-
-Please submit this repository link (not the Pages link) on Canvas under Lab 3.
-
-
