@@ -14,4 +14,4 @@ https://boscoliu0.github.io/sp25-cse110-lab3/
 - **standup.md** – Daily standup notes template  
 - **index.html** – Meeting minutes HTML from Lab 2 (updated for Lab 3)  
 - **style.css** – External CSS stylesheet for Lab 3  
-- **css-validation.png** – Screenshot of successful CSS validation  
+- **css-validation.jpg** – Screenshot of successful CSS validation  
