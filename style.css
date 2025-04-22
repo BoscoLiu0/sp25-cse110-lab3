@@ -143,7 +143,7 @@ hr {
 /* === Footer Styles === */
 footer {
   text-align: center;
-  background-color: var(--bg-color);
+  background-color: color-mix(in srgb, var(--bg-color), black 20%);
   color: hsla(120,60%,40%,0.8);
   padding:12pt 0;
   margin-top:2em;
@@ -163,7 +163,7 @@ input[type="text"]   { border:1px solid #888; }
 h2 + p                 { margin-top:0; font-style:italic; }
 h1 ~ section           { opacity:0.95; }
 section.content-section {
-  background-color:  var(--section-bg);
+  background-color: color(display-p3 0.8 0.9 0.7);
   box-shadow:inset 0 0 5px rgba(0,0,0,0.1);
 }
 main:has(img)          { border:2px dashed green; }
@@ -190,7 +190,7 @@ main:has(img)          { border:2px dashed green; }
 }
 
 #feedback {
-    min-width: 200px;
-    position: relative;
-    top: 10px;
-  }  
+  min-width: 200px;
+  position: relative;
+  top: 10px;
+}
