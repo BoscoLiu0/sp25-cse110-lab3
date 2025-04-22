@@ -1,0 +1,194 @@
+/* === Font Import === */
+/* Bring in the 'Poppins' font from Google Fonts - needs to be at the very top! */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* === General Page Styles === */
+body {
+  /* Use 'Poppins' as the main font, fallback to basic sans-serif */
+  font-family: 'Poppins', sans-serif; 
+  /* Base text size for the whole page */
+  font-size: 16px; 
+  /* Spacing between lines of text, makes it easier to read */
+  line-height: 1.6; 
+  /* Make the whole page background blue, like the header */
+  background-color: rgb(70, 130, 180); 
+  /* Default text needs to be light to show up on the blue! */
+  color: white; 
+  /* Add some space around the edges of the page */
+  margin: 1em; 
+  /* Remove default browser padding */
+  padding: 0; 
+}
+
+/* === Header Styles === */
+header {
+  /* Center text inside the header */
+  text-align: center; 
+  /* Add some space inside the header */
+  padding: 10px 20px; 
+   /* Navy blue line at the bottom */
+  border-bottom: 3px solid navy;
+  /* Header text is already white because of the body style, but we can be explicit */
+  color: white; 
+  /* No separate background needed if body is the same blue */
+  /* background-color: rgb(70, 130, 180); */ 
+}
+
+/* === Navigation Styles === */
+nav {
+  /* Center the nav links */
+  text-align: center; 
+  padding: 10px 0;
+  /* Light background to make nav stand out a bit */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  margin-bottom: 1.5em; /* Space below nav */
+}
+
+nav a {
+  /* Get rid of underlines on links */
+  text-decoration: none; 
+   /* Make nav links a lighter blue/white */
+  color: #e0f0ff;
+  /* Space between nav links */
+  margin: 0 10px; 
+}
+
+/* === Main Content Area === */
+main {
+  /* Give the main content a max width so it doesn't stretch too wide */
+  max-width: 960px; 
+  /* 'auto' on left/right margin centers block elements that have a width */
+  margin-left: auto; 
+  margin-right: auto;
+  /* Give the main content area a slightly see-through white background */
+  background-color: rgba(255, 255, 255, 0.9); 
+  /* Text inside main should be dark again */
+  color: #333; 
+  /* Space inside the main content area */
+  padding: 1.5em; 
+  /* Slightly rounded corners */
+  border-radius: 8px; 
+}
+
+/* === Section Styles === */
+section {
+  /* Let sections show the main background unless overridden */
+  background-color: transparent; 
+  /* Space inside sections */
+  padding: 1em; 
+  /* Space below each section */
+  margin-bottom: 1.5em; 
+  /* Light border around sections */
+  border: 1px solid lightblue; 
+  border-radius: 4px;
+  /* You could center text in all sections here if you want */
+  /* text-align: center; */
+}
+
+/* Style the feedback section differently */
+#feedback {
+  background-color: rgba(230, 240, 255, 0.5); /* Light blue tint */
+}
+
+/* === Heading Styles === */
+h1, h2, h3 {
+  /* Use the bold version of Poppins */
+  font-weight: 700; 
+  /* Add some space below headings */
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  /* Bigger font size for the main title */
+  font-size: 2.2rem; 
+}
+
+h2 {
+  /* Slightly smaller size for section titles */
+  font-size: 1.6rem; 
+  /* Light line below H2 headings */
+  border-bottom: 1px solid #eee; 
+  padding-bottom: 0.3em;
+}
+
+/* === Specific Element Styles === */
+
+/* Italicize the attendance list items */
+#attendance li {
+  font-style: italic; 
+}
+
+/* Style the text inside the 'details' dropdown */
+details p {
+  font-family: monospace; /* Use a code-like font */
+  background-color: rgba(0, 0, 0, 0.05); /* Very light dark background */
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* === Media Element Styles === */
+
+/* Style for image and video */
+#recordings img, 
+#recordings video {
+  display: block;         /* Make them block elements */
+  margin-left: auto;      /* Center them */
+  margin-right: auto;
+  margin-top: 1em;        /* Add vertical spacing */
+  margin-bottom: 1em;
+  max-width: 80%;       /* Limit width */
+  height: auto;           /* Maintain aspect ratio */
+  /* You could add borders etc. here too */
+  /* border: 1px solid #ccc; */
+}
+
+/* Style for audio player - separate height handling */
+#recordings audio {
+  display: block;         /* Make it block */
+  margin-left: auto;      /* Center it */
+  margin-right: auto;
+  margin-top: 1em;        /* Add vertical spacing */
+  margin-bottom: 1em;
+  width: 80%;           /* Set a width, e.g., match max-width above */
+  /* DO NOT use height: auto; let the browser handle the control bar height */
+  /* height: initial; */ /* Or just omit height property */
+}
+
+/* Style the horizontal rules */
+hr {
+    border: none; 
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light line on blue background */
+    margin: 2em 0; 
+}
+
+/* === Footer Styles === */
+footer {
+  /* Center footer text */
+  text-align: center; 
+  background-color: rgba(0, 0, 0, 0.2); /* Darker see-through background */
+  color: #eee; /* Light text */
+  padding: 1em 0;
+  margin-top: 2em;
+  font-size: 0.9em; /* Slightly smaller text */
+}
+
+/* Style for links when mouse hovers over them */
+nav a:hover {
+    color: white; /* Let's make the text white on hover */
+    background-color: rgb(117, 0, 128); /* Add a navy background like the header border */
+    /* Let's add back the underline on hover, fulfilling text-decoration requirement */
+    text-decoration: underline; 
+    border-radius: 4px; /* Add slight rounding to the background */
+    /* Add some padding to make the background visible */
+    padding: 3px 6px; 
+     /* Adjust margin slightly if padding was added */
+    margin: 0 7px; 
+  }
+  
+  /* Style for links when they are being actively clicked */
+  nav a:active {
+    color: lightcoral; /* Change text to light coral when clicking */
+    background-color: black; /* Darker background for click feedback */
+    /* Keep the underline during click */
+    text-decoration: underline; 
+  }
