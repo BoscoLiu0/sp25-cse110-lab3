@@ -168,7 +168,7 @@ section.content-section {
 }
 main:has(img)          { border:2px dashed green; }
 
-.content-section > h2 {
+    .content-section  > h2 {
     text-transform: uppercase;
     color: darkblue;
   }
@@ -192,5 +192,122 @@ main:has(img)          { border:2px dashed green; }
 #feedback {
   min-width: 200px;
   position: relative;
-  top: 10px;
 }
+
+/* === Feedback Form Layout (Using Grid - Revised) === */
+
+#feedback fieldset {
+    border: 1px solid #ccc; 
+    padding: 1.5em;       
+  }
+  
+  #feedback legend {
+    font-weight: bold;    
+    padding: 0 0.5em;     
+    color: navy;          
+  }
+  
+  #feedback form {
+    display: grid; 
+    /* Columns: Label (auto width) | Input (takes rest) */
+    grid-template-columns: auto 1fr; 
+    /* Rows implicitly created, align text baselines */
+    align-items: baseline; /* Changed from 'center' for better text alignment */
+    /* Gap between rows | Gap between columns */
+    gap: 0.8em 1em; /* Adjusted gap */
+  }
+  
+  /* Style labels in the first column */
+  #feedback label {
+    grid-column: 1 / 2;  /* Explicitly place in first column */
+    text-align: right;   /* Right-align the label text */
+    padding-right: 0.5em; /* Space between label and input */
+  }
+  
+  /* Style inputs/selects/textarea in the second column */
+  #feedback input[type="text"],
+  #feedback input[type="date"],
+  #feedback input[list="tech"], /* Corrected selector for datalist input */
+  #feedback select,
+  #feedback textarea {
+    grid-column: 2 / 3; /* Explicitly place in second column */
+    width: 100%;        /* Make them fill the column */
+    padding: 6px;       /* Consistent padding */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Include padding/border in width */
+  }
+  
+  /* Paragraphs containing radio/checkbox groups span both columns */
+  #feedback p {
+    grid-column: 1 / -1; /* Span all columns */
+    text-align: left;    /* Align text left */
+    margin: 0.5em 0 0.2em 0; /* Adjust margins */
+    font-weight: bold;   /* Optionally make the question bold */
+  }
+  
+  /* Container for radio/checkbox options (assuming they follow the <p>) */
+  /* We might need to wrap options in a div in HTML for perfect grid control, */
+  /* but let's try styling the inputs/labels directly first. */
+  #feedback input[type="radio"],
+  #feedback input[type="checkbox"] {
+     grid-column: 2 / 3; /* Try placing the control in the second column */
+     justify-self: start; /* Align control to the start of the cell */
+     margin-right: 5px; /* Space between control and its label */
+  }
+  /* Style the labels associated with radio/checkboxes */
+  #feedback input[type="radio"] + label,
+  #feedback input[type="checkbox"] + label {
+      grid-column: 2 / 3; /* Also try placing label in second column */
+      text-align: left; /* Ensure left alignment */
+      /* We might need more specific selectors or HTML changes if this doesn't align well */
+  }
+  
+  
+  /* Textarea label spans column 1 */
+  #feedback label[for="comments-box"] {
+    grid-column: 1 / 2;
+    text-align: right;
+    align-self: start; /* Align label to the top with textarea */
+    padding-top: 6px; /* Align roughly with textarea padding */
+  }
+  /* Textarea spans column 2 */
+  #feedback textarea {
+    grid-column: 2 / 3;
+  }
+  
+  
+  /* Datalist input needs specific styling if different */
+  #feedback label[for="tech-choice"] {
+      grid-column: 1 / 2;
+  }
+  #feedback input[list="tech"] {
+      grid-column: 2 / 3;
+  }
+  
+  /* Select dropdown styling */
+  #feedback label[for="role"] {
+      grid-column: 1 / 2;
+  }
+  #feedback select {
+      grid-column: 2 / 3;
+  }
+  
+  
+  /* Submit button styling */
+  #feedback button[type="submit"] {
+    grid-column: 2 / 3; /* Place button in the second column */
+    justify-self: start; /* Align button to the start of the grid area */
+    margin-top: 1em; 
+    padding: 10px 20px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    width: auto; 
+  }
+  
+  #feedback button[type="submit"]:hover {
+    background-color: steelblue; 
+  }
