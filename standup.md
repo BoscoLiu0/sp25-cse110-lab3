@@ -9,7 +9,7 @@
 
 **Materials:**
 
-- [Lab 3 Repository](https://github.com/<your-github-username>/sp25-cse110-lab3](https://github.com/BoscoLiu0/sp25-cse110-lab3.git)
+- [Lab 3 Repository](https://github.com/BoscoLiu0/sp25-cse110-lab3.git)
 - `style.css`, `index.html` files
 - `css-validation.png` (CSS Validator screenshot)
 
