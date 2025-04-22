@@ -168,7 +168,7 @@ section.content-section {
 }
 main:has(img)          { border:2px dashed green; }
 
-    .content-section & > h2 {
+.content-section > h2 {
     text-transform: uppercase;
     color: darkblue;
   }
