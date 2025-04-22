@@ -38,4 +38,4 @@
 
 ## Action Items
 
-- [ ] **@Liu**: Run the W3C CSS Validator on `style.css`, export the validation screenshot as `css-validation.png`, and commit it before end of day.
+- [ ] **@Liu**: Run the W3C CSS Validator on `style.css`, export the validation screenshot as `css-validation.jpg`, and commit it before end of day.
